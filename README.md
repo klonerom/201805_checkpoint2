@@ -2,10 +2,10 @@
 
 ## Description
 
-This repository is a simple PHP MVC structure from scratch.
+This repository is the begining of your new challenge based on your favorite PHP MVC structure.
 
-It uses some cool vendors/libraries such as FastRouter (fast request php router), Twig and PHP_CodeSniffer soon.
-For this one, just a simple example where users can chose one of their databases and see tables in it.
+It still uses some cool vendors/libraries such as FastRouter (fast request php router), Twig and PHP_CodeSniffer.
+For this one, we add your new friend : PHPUnit.
 
 ## Steps
 
