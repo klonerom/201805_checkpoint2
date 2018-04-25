@@ -1,0 +1,178 @@
+@font-face {
+    font-family: starjedi;
+    src: url("../font/Starjedi.cc3019aa.ttf");
+}
+
+
+@font-face {
+    font-family: starjout;
+    src: url("../font/Starjout.f72f509a.ttf");
+}
+
+@font-face {
+    font-family: biko;
+    src: url("../font/Biko_Regular.7cf27339.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    background-color: #000;
+    background-image: url("../images/stars.6494ab5b.png");
+    background-size: cover;
+    font-family: biko, Arial, Helvetica, sans-serif;
+}
+
+h1{
+  color:#FFD200;
+  font-family: starjout, Arial, Helvetica, sans-serif;
+}
+
+h2, strong {
+  text-align: center;
+  color:#FFD200;
+  font-family: starjedi, Arial, Helvetica, sans-serif;
+}
+
+a {
+  color : #FFD200;
+      font-family: starjedi;
+}
+a:hover{
+  color : #FFD200;
+  font-weight: bold;
+}
+
+em {
+  color : #FFD200;
+  font-size: 1.1em;
+}
+
+blockquote{
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 1vw;
+}
+
+button {
+    background-color: #f7e655;
+    color: #000;
+    font-family: starjedi;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active,
+button:disabled {
+    background-color: #f0eab8;
+}
+
+button:disabled {
+    font-style: italic;
+}
+
+#root {
+    height: 100%;
+}
+
+
+footer,
+header {
+    background-color:#FFD200;
+    padding: 5px 20px;
+    color: #f7e655;
+    text-align: center;
+}
+
+header .title {
+    height: 35px;
+    line-height: 35px;
+    font-size: 35px;
+    font-family: starjhol;
+}
+
+header .subtitle {
+    font-family: jedi-subtitle;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+
+footer {
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: starjedi;
+    color: #000;
+}
+
+.addChar form{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+}
+
+.addChar input {
+    height: 24px;
+    line-height: 24px;
+    margin-right: 10px;
+    padding-left: 10px;
+    border: none;
+    border-top: 1px solid #f7e655;
+    border-bottom: 1px solid #f7e655;
+    background-color: transparent;
+    -webkit-transition: padding .2s linear;
+    -o-transition: padding .2s linear;
+    transition: padding .2s linear;
+    color: #f7e655;
+    font-family: starjedi;
+}
+
+.addChar input:focus {
+    padding: 5px 0 5px 10px;
+    outline: none;
+    border-top: 1px solid #e0d24d;
+    border-bottom: 1px solid #e0d24d;
+}
+
+
+
+.list {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    list-style: none;
+}
+
+.list li {
+    cursor: pointer;
+}
+
+.list li.dead span:first-child {
+    text-decoration: line-through;
+    font-style: italic;
+    color: #e04d4d;
+}
+
+.list li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.list li span:last-child {
+    margin-left: 10px;
+    color: #e71919;
+}
