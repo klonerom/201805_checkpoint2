@@ -11,10 +11,10 @@ namespace Controller;
 
 /**
  * Class CheckpointController
- *
  */
 class CheckpointController extends AbstractController
 {
+
 
     /**
      * Display checkpoint listing
@@ -24,5 +24,5 @@ class CheckpointController extends AbstractController
     public function index()
     {
         return $this->twig->render('Checkpoint/index.html.twig');
-    }
-}
+    }//end index()
+}//end class

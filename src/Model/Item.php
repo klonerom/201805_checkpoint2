@@ -11,21 +11,23 @@ namespace Model;
 
 /**
  * Class Item
- *
  */
 class Item
 {
+
     private $id;
 
     private $title;
 
+
     /**
-     * @return int
+     * @return integer
      */
     public function getId(): int
     {
         return $this->id;
-    }
+    }//end getId()
+
 
     /**
      * @param mixed $id
@@ -37,7 +39,8 @@ class Item
         $this->id = $id;
 
         return $this;
-    }
+    }//end setId()
+
 
     /**
      * @return mixed
@@ -45,7 +48,8 @@ class Item
     public function getTitle(): string
     {
         return $this->title;
-    }
+    }//end getTitle()
+
 
     /**
      * @param mixed $title
@@ -57,5 +61,5 @@ class Item
         $this->title = $title;
 
         return $this;
-    }
-}
+    }//end setTitle()
+}//end class

@@ -14,10 +14,10 @@ use Model\ItemManager;
 
 /**
  * Class ItemController
- *
  */
 class ItemController extends AbstractController
 {
+
 
     /**
      * Display item listing
@@ -27,30 +27,32 @@ class ItemController extends AbstractController
     public function index()
     {
         $itemManager = new ItemManager();
-        $items = $itemManager->selectAll();
+        $items       = $itemManager->selectAll();
 
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
-    }
+    }//end index()
+
 
     /**
      * Display item informations specified by $id
      *
-     * @param  int $id
+     * @param integer $id
      *
      * @return string
      */
     public function show(int $id)
     {
         $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
+        $item        = $itemManager->selectOneById($id);
 
         return $this->twig->render('Item/show.html.twig', ['item' => $item]);
-    }
+    }//end show()
+
 
     /**
      * Display item edition page specified by $id
      *
-     * @param  int $id
+     * @param integer $id
      *
      * @return string
      */
@@ -58,7 +60,8 @@ class ItemController extends AbstractController
     {
         // TODO : edit item with id $id
         return $this->twig->render('Item/edit.html.twig', ['item', $id]);
-    }
+    }//end edit()
+
 
     /**
      * Display item creation page
@@ -69,12 +72,13 @@ class ItemController extends AbstractController
     {
         // TODO : add a new item
         return $this->twig->render('Item/add.html.twig');
-    }
+    }//end add()
+
 
     /**
      * Display item delete page
      *
-     * @param  int $id
+     * @param integer $id
      *
      * @return string
      */
@@ -82,5 +86,5 @@ class ItemController extends AbstractController
     {
         // TODO : delete the item with id $id
         return $this->twig->render('Item/index.html.twig');
-    }
-}
+    }//end delete()
+}//end class
