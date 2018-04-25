@@ -26,9 +26,13 @@ body {
     font-family: biko, Arial, Helvetica, sans-serif;
 }
 
+.main {
+  min-height: 80vh;
+}
+
 h1{
   color:#FFD200;
-  font-family: starjout, Arial, Helvetica, sans-serif;
+  font-family: starjout;
   margin: 4vw;
 }
 
@@ -38,7 +42,7 @@ h2{
 h2, strong {
   text-align: center;
   color:#FFD200;
-  font-family: starjedi, Arial, Helvetica, sans-serif;
+  font-family: starjedi;
 }
 
 a {
@@ -106,19 +110,6 @@ header {
     text-align: center;
 }
 
-header .title {
-    height: 35px;
-    line-height: 35px;
-    font-size: 35px;
-    font-family: starjhol;
-}
-
-header .subtitle {
-    font-family: jedi-subtitle;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: #fff;
-}
 
 
 footer {

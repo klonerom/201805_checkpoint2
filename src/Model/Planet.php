@@ -11,23 +11,21 @@ namespace Model;
 
 /**
  * Class Item
+ *
  */
-class Item
+class Planet
 {
-
     private $id;
 
-    private $title;
-
+    private $name;
 
     /**
-     * @return integer
+     * @return int
      */
     public function getId(): int
     {
         return $this->id;
-    }//end getId()
-
+    }
 
     /**
      * @param mixed $id
@@ -39,27 +37,22 @@ class Item
         $this->id = $id;
 
         return $this;
-    }//end setId()
-
+    }
 
     /**
      * @return mixed
      */
-    public function getTitle(): string
+    public function getName()
     {
-        return $this->title;
-    }//end getTitle()
-
+        return $this->name;
+    }
 
     /**
-     * @param mixed $title
-     *
-     * @return Item
+     * @param mixed $name
      */
-    public function setTitle($title):Item
+    public function setName($name)
     {
-        $this->title = $title;
+        $this->name = $name;
+    }
 
-        return $this;
-    }//end setTitle()
-}//end class
+}

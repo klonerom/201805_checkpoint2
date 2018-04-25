@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "hash": "f2d4c7bcd1dc77db6a28760b9795f5cc",
-=======
     "hash": "b22b3b34bbcc453c7f6e021b574d73bb",
->>>>>>> algo_part
     "packages": [
         {
             "name": "nikic/fast-route",
@@ -184,8 +180,6 @@
     ],
     "packages-dev": [
         {
-<<<<<<< HEAD
-=======
             "name": "doctrine/instantiator",
             "version": "1.1.0",
             "source": {
@@ -1550,7 +1544,6 @@
             "time": "2016-10-03 07:35:21"
         },
         {
->>>>>>> algo_part
             "name": "squizlabs/php_codesniffer",
             "version": "3.2.3",
             "source": {
@@ -1600,8 +1593,6 @@
                 "standards"
             ],
             "time": "2018-02-20 21:35:23"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "theseer/tokenizer",
@@ -1692,7 +1683,6 @@
                 "validate"
             ],
             "time": "2018-01-29 19:49:41"
->>>>>>> algo_part
         }
     ],
     "aliases": [],

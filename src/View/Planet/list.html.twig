@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Planets</h1>
+    <ul>
+        {% for planet in planets %}
+            <li><a href="/planets/{{ planet.id }}">{{ planet.id }}. {{ planet.name }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    <a href="/planets/add">Add a planet</a><br>
+    <a href="/movies">Check the movies</a><br>
+    <a href="/characters">Check the characters</a><br>
+{% endblock %}

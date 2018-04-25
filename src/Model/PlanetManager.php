@@ -12,10 +12,9 @@ namespace Model;
 /**
  *
  */
-class ItemManager extends AbstractManager
+class PlanetManager extends AbstractManager
 {
-    const TABLE = 'item';
-
+    const TABLE = 'planet';
 
     /**
      *  Initializes this class.
@@ -23,5 +22,5 @@ class ItemManager extends AbstractManager
     public function __construct()
     {
         parent::__construct(self::TABLE);
-    }//end __construct()
-}//end class
+    }
+}

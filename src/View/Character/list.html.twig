@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Characters</h1>
+    <ul>
+        {% for character in characters %}
+            <li><a href="/characters/{{ character.id }}">{{ character.id }}. {{ character.name }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    <a href="/characters/add">Add a movie</a><br>
+    <a href="/movies">Check the movies</a><br>
+    <a href="/planets">Check the planets</a><br>
+{% endblock %}
