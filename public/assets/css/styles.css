@@ -29,8 +29,12 @@ body {
 h1{
   color:#FFD200;
   font-family: starjout, Arial, Helvetica, sans-serif;
+  margin: 4vw;
 }
 
+h2{
+  margin: 2vw;
+}
 h2, strong {
   text-align: center;
   color:#FFD200;
@@ -45,7 +49,7 @@ a:hover{
   color : #FFD200;
   font-weight: bold;
 }
-
+samp,
 em {
   color : #FFD200;
   font-size: 1.1em;
@@ -54,6 +58,7 @@ em {
 blockquote{
   background-color: rgba(255, 255, 255, 0.3);
   padding: 1vw;
+  margin: 1rem auto;
 }
 
 code {
@@ -63,6 +68,7 @@ code {
 }
 
 code.block{
+margin: 1rem auto;
     display: block;
 }
 
