@@ -56,6 +56,16 @@ blockquote{
   padding: 1vw;
 }
 
+code {
+  padding: 1vw;
+  color:#0A9196;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+code.block{
+    display: block;
+}
+
 button {
     background-color: #f7e655;
     color: #000;
