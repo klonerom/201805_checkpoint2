@@ -1,20 +1,19 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Service\String;
 
-final class StringTest extends TestCase
+final class StringToolsTest extends TestCase
 {
   /**
-       * @dataProvider stringsProvider
+       * @dataProvider helloStringProvider
        */
-    public function testHelloWilder(): void
+    public function testHelloWilder($sample): void
     {
-        $this->assertEquals('hello wilder', String::trimer());
+        $this->assertSame('hello wilder', Service\StringTools::trimWhiteSpaces($sample));
     }
 
 
-    public function stringsProvider()
+    public function helloStringProvider()
     {
         return [
             'removing one white space before'  => [' hello wilder'],

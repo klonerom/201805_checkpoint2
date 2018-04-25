@@ -17,14 +17,16 @@ use Twig_Environment;
  */
 abstract class AbstractController
 {
+
     protected $twig;
+
 
     /**
      *  Initializes this class.
      */
     public function __construct()
     {
-        $loader = new Twig_Loader_Filesystem(APP_VIEW_PATH);
+        $loader     = new Twig_Loader_Filesystem(APP_VIEW_PATH);
         $this->twig = new Twig_Environment(
             $loader,
             [
@@ -33,5 +35,5 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new \Twig_Extension_Debug());
-    }
-}
+    }//end __construct()
+}//end class
