@@ -12,15 +12,16 @@ namespace Model;
 /**
  *
  */
-class ItemManager extends AbstractManager
+class CharacterManager extends AbstractManager
 {
-    const TABLE = 'item';
+    const TABLE = 'characters';
+    const CLASSE = 'Character';
 
     /**
      *  Initializes this class.
      */
     public function __construct()
     {
-        parent::__construct(self::TABLE);
+        parent::__construct(self::TABLE, self::CLASSE);
     }
 }

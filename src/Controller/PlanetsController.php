@@ -9,14 +9,14 @@
 
 namespace Controller;
 
-use Model\Item;
-use Model\ItemManager;
+use Model\Planet;
+use Model\PlanetManager;
 
 /**
  * Class ItemController
  *
  */
-class ItemController extends AbstractController
+class planetsController extends AbstractController
 {
 
     /**
@@ -24,12 +24,12 @@ class ItemController extends AbstractController
      *
      * @return string
      */
-    public function index()
+    public function list()
     {
-        $itemManager = new ItemManager();
-        $items = $itemManager->selectAll();
+        $planetManager = new PlanetManager();
+        $planets = $planetManager->selectAll();
 
-        return $this->twig->render('Item/index.html.twig', ['items' => $items]);
+        return $this->twig->render('Planet/list.html.twig', ['planets' => $planets]);
     }
 
     /**
@@ -39,7 +39,7 @@ class ItemController extends AbstractController
      *
      * @return string
      */
-    public function show(int $id)
+    public function details(int $id)
     {
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneById($id);

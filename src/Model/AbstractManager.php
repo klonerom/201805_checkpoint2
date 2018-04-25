@@ -21,12 +21,13 @@ abstract class AbstractManager
     protected $table;
     protected $className;
 
+
     /**
      *  Initializes Manager Abstract class.
      *
      * @param string $table Table name of current model
      */
-    public function __construct(string $table)
+    public function __construct(string $table, string $className)
     {
         $connexion = new Connection();
         $this->pdoConnection = $connexion->getPdoConnection();
@@ -41,7 +42,7 @@ abstract class AbstractManager
      */
     public function selectAll(): array
     {
-        return $this->pdoConnection->query('SELECT * FROM ' . $this->table, \PDO::FETCH_CLASS, $this->className)->fetchAll();
+        return $this->pdoConnection->query('SELECT * FROM ' . $this->table, \PDO::FETCH_BOTH)->fetchAll();
     }
 
     /**
