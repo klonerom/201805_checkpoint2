@@ -1,6 +1,12 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Movie : {{ movie.name }}</h1>
-    <a href="/planets">Back</a>
+    <h1>Character : {{ character.name }}</h1>
+    <ul>
+        <li>Area : {{ character.area }}</li>
+        <li>Size : {{ character.size }}m</li>
+        <li>Planet : {{ character.planet }}</li>
+        <li>Movie : {{ character.movie }}</li>
+    </ul>
+    <a href="/characters">Back</a>
 {% endblock %}

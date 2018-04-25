@@ -14,14 +14,13 @@ namespace Model;
  */
 class PlanetManager extends AbstractManager
 {
-    const TABLE = 'planets';
-    const CLASSE = 'Planet';
+    const TABLE = 'planet';
 
     /**
      *  Initializes this class.
      */
     public function __construct()
     {
-        parent::__construct(self::TABLE, self::CLASSE);
+        parent::__construct(self::TABLE);
     }
 }

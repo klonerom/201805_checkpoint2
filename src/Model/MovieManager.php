@@ -14,14 +14,13 @@ namespace Model;
  */
 class MovieManager extends AbstractManager
 {
-    const TABLE = 'movies';
-    const CLASSE = 'Movie';
+    const TABLE = 'movie';
 
     /**
      *  Initializes this class.
      */
     public function __construct()
     {
-        parent::__construct(self::TABLE, self::CLASSE);
+        parent::__construct(self::TABLE);
     }
 }

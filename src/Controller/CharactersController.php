@@ -9,8 +9,8 @@
 
 namespace Controller;
 
-use Model\Item;
-use Model\Characters;
+use Model\Character;
+use Model\CharacterManager;
 
 /**
  * Class ItemController
@@ -26,7 +26,7 @@ class charactersController extends AbstractController
      */
     public function list()
     {
-        $charactersManager = new CharactersManager();
+        $charactersManager = new CharacterManager();
         $characters = $charactersManager->selectAll();
 
         return $this->twig->render('Character/list.html.twig', ['characters' => $characters]);
@@ -41,10 +41,10 @@ class charactersController extends AbstractController
      */
     public function details(int $id)
     {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
+        $charactersManager = new CharacterManager();
+        $character = $charactersManager->selectOneById($id);
 
-        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
+        return $this->twig->render('Character/details.html.twig', ['character' => $character]);
     }
 
     /**
@@ -55,7 +55,7 @@ class charactersController extends AbstractController
     public function add()
     {
         // TODO : add a new item
-        return $this->twig->render('Item/add.html.twig');
+        return $this->twig->render('Character/add.html.twig');
     }
 
 }

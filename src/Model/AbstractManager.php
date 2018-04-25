@@ -27,7 +27,7 @@ abstract class AbstractManager
      *
      * @param string $table Table name of current model
      */
-    public function __construct(string $table, string $className)
+    public function __construct(string $table)
     {
         $connexion = new Connection();
         $this->pdoConnection = $connexion->getPdoConnection();
@@ -42,7 +42,7 @@ abstract class AbstractManager
      */
     public function selectAll(): array
     {
-        return $this->pdoConnection->query('SELECT * FROM ' . $this->table, \PDO::FETCH_BOTH)->fetchAll();
+        return $this->pdoConnection->query('SELECT * FROM ' . $this->table)->fetchAll(\PDO::FETCH_CLASS, $this->className);
     }
 
     /**

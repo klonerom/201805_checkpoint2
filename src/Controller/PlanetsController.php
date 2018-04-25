@@ -41,23 +41,10 @@ class planetsController extends AbstractController
      */
     public function details(int $id)
     {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
+        $planetManager = new PlanetManager();
+        $planet = $planetManager->selectOneById($id);
 
-        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
-    }
-
-    /**
-     * Display item edition page specified by $id
-     *
-     * @param  int $id
-     *
-     * @return string
-     */
-    public function edit(int $id)
-    {
-        // TODO : edit item with id $id
-        return $this->twig->render('Item/edit.html.twig', ['item', $id]);
+        return $this->twig->render('Planet/details.html.twig', ['planet' => $planet]);
     }
 
     /**
@@ -68,19 +55,7 @@ class planetsController extends AbstractController
     public function add()
     {
         // TODO : add a new item
-        return $this->twig->render('Item/add.html.twig');
+        return $this->twig->render('Planet/add.html.twig');
     }
 
-    /**
-     * Display item delete page
-     *
-     * @param  int $id
-     *
-     * @return string
-     */
-    public function delete(int $id)
-    {
-        // TODO : delete the item with id $id
-        return $this->twig->render('Item/index.html.twig');
-    }
 }
