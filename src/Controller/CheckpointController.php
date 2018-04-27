@@ -33,6 +33,6 @@ class CheckpointController extends AbstractController
   */
   public function error(int $error)
   {
-    return $this->twig->render('Checkpoint/error.html.twig');
+    return $this->twig->render('Checkpoint/error.html.twig', ['error' => $error]);
   }//end index()
 }//end class

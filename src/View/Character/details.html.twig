@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-  <h1 class="col-12">Character : {{ character.name }}</h1>
+  <h1 class="col-12">{{ character.name }}</h1>
 </div>
 <div class="row detail">
   <figure class="col-12 col-md-4">
@@ -11,8 +11,8 @@
   <div class="col-12 col-md-8">
     <p>Area : {{ character.area }}</p>
     <p>Size : {{ character.size }}m</p>
-    <p>Planet : {{ character.planet }}</p>
-    <p>Movie : {{ character.movie }}</p>
+    <p>Planet : <a href="">{{ character.planet }}</a></p>
+    <p>Movie : <a href="">{{ character.movie }}</a></p>
   </div>
 </div>
 <a href="/characters">Back</a>

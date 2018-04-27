@@ -12,6 +12,7 @@
 $routes = [
   'Checkpoint' => [ // Controller
     ['index', '/', 'GET'], // action, url, method
+    ['error', '/error/{error:\d+}', 'GET'], // action, url, method
   ],
   'Characters' => [ // Controller
     ['list', '/characters', 'GET'], // action, url, method

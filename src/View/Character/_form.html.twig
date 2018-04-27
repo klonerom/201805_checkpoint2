@@ -1,19 +1,41 @@
 <form method="post">
-    <label for="title">Character's name :</label>
-    <input type="text" name="title"><br>
-    <label for="area">Area :</label>
-    <input type="text" name="picture"><br>
-    <label for="area">Picture :</label>
-    <input type="text" name="area"><br>
-    <label for="size">Size :</label>
-    <input type="text" name="size"><br>
-    <label for="planet">Planet :</label>
-    <select name="planet">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="title">Name :</label>
+      <input type="text" class="form-control" name="title">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="area">Area :</label>
+      <input type="text" class="form-control" name="picture">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="area">Picture :</label>
+      <input type="url" class="form-control" name="area">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="size">Size :</label>
+      <input type="text" class="form-control" name="size">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="planet">Planet :</label>
+      <select name="planet" class="custom-select">
         <option value=""></option>
-    </select> <br>
-    <label for="movie">Movie :</label>
-    <select name="movie">
-        <option value=""></option>
-    </select> <br>
-    <input type="submit" value="Valider">
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="movie">Movie :</label>
+      <select name="movie" class="custom-select">
+        <option value="">plp</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="submit" value="Valider">
+    </div>
+  </div>
 </form>

@@ -36,11 +36,13 @@ switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:
         // ... 404 Not Found
         header("HTTP/1.0 404 Not Found");
+        header('Location: /error/404');
         break;
     case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
         $allowedMethods = $routeInfo[1];
         // ... 405 Method Not Allowed
         header("HTTP/1.0 405 Method Not Allowed");
+        header('Location: /error/405');
         break;
     case FastRoute\Dispatcher::FOUND:
         $handler = $routeInfo[1];

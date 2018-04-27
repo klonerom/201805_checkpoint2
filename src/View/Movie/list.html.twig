@@ -5,11 +5,11 @@
   <h1 class="col-12">All Movies</h1>
 </div>
 <div class="row">
-  <ul>
+  <ul class="list">
     {% for movie in movies %}
-    <li><a href="/movies/{{ movie.id }}">{{ movie.id }}. {{ movie.name }}</a></li>
+      <li><a href="/movies/{{ movie.id }}">{{ movie.id }}. {{ movie.name }}</a></li>
     {% else %}
-    <li>Nothing to display</li>
+      <li>Nothing to display</li>
     {% endfor %}
   </ul>
 </div>

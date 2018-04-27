@@ -5,11 +5,11 @@
   <h1 class="col-12">All Characters</h1>
 </div>
 <div class="row">
-  <ul>
+  <ul class="list">
     {% for character in characters %}
-    <li><a href="/characters/{{ character.id }}">{{ character.id }}. {{ character.name }}</a></li>
+      <li><a href="/characters/{{ character.id }}">{{ character.id }}. {{ character.name }}</a></li>
     {% else %}
-    <li>Nothing to display</li>
+      <li>Nothing to display</li>
     {% endfor %}
   </ul>
 </div>
