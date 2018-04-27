@@ -43,8 +43,8 @@ class CharacterManager extends AbstractManager
     {
         // prepared request
         $statement = $this->pdoConnection->prepare("
-SELECT $this->table.id, $this->table.name, size, area, planet.name as planet, movie.name as movie 
-FROM $this->table INNER JOIN movie ON id_movie=movie.id 
+SELECT $this->table.id, $this->table.name, $this->table.picture, size, area, planet.name as planet, movie.name as movie 
+FROM $this->table INNER JOIN movie ON id_movie=movie.id
 INNER JOIN planet ON id_planet = planet.id WHERE $this->table.id=:id");
         //$statement = $this->pdoConnection->prepare("SELECT * FROM $this->table WHERE id=:id");
         $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);

@@ -97,10 +97,6 @@ button:disabled {
     font-style: italic;
 }
 
-#root {
-    height: 100%;
-}
-
 
 footer,
 header {
@@ -111,6 +107,14 @@ header {
 }
 
 
+header .dropdown-menu {
+  background-color:#000;
+}
+
+header .dropdown-item {
+  color: #FFD200;
+}
+
 
 footer {
     bottom: 0;
@@ -120,7 +124,7 @@ footer {
     color: #000;
 }
 
-.addChar form{
+.main form{
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -129,9 +133,10 @@ footer {
     padding: 10px;
 }
 
-.addChar input {
+.btn,
+.main input {
     height: 24px;
-    line-height: 24px;
+    line-height: 1;
     margin-right: 10px;
     padding-left: 10px;
     border: none;
@@ -142,44 +147,61 @@ footer {
     -o-transition: padding .2s linear;
     transition: padding .2s linear;
     color: #f7e655;
-    font-family: starjedi;
 }
 
-.addChar input:focus {
+.btn,
+.main input[type="submit"]{
+  text-transform: lowercase;
+  font-family: starjedi;
+}
+
+.main input:focus {
     padding: 5px 0 5px 10px;
     outline: none;
     border-top: 1px solid #e0d24d;
     border-bottom: 1px solid #e0d24d;
 }
 
+.main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
 
-
-.list {
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    list-style: none;
 }
 
-.list li {
-    cursor: pointer;
+.main li {
+  padding-left: 1em;
+  text-indent: -.7em;
+  width:33%;
 }
 
-.list li.dead span:first-child {
-    text-decoration: line-through;
-    font-style: italic;
-    color: #e04d4d;
+.main li::before {
+  content: "• ";
+  color: #e0d24d; /* or whatever color you prefer */
 }
 
-.list li {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+.main ul li a {
+  font-family: biko;
 }
 
-.list li span:last-child {
+.main ul li span:last-child {
     margin-left: 10px;
     color: #e71919;
+}
+
+.main nav {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.main .detail {
+    padding: 2vw 1vw 1vw;
+    background-color: rgba(255, 210, 0, 0.3);
+    font-size: 1.5rem;
 }

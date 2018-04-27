@@ -1,15 +1,21 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Movies</h1>
-    <ul>
-        {% for movie in movies %}
-            <li><a href="/movies/{{ movie.id }}">{{ movie.id }}. {{ movie.name }}</a></li>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
-    </ul>
-    <a href="/movies/add">Add a movie</a><br>
-    <a href="/planets">Check the planets</a><br>
-    <a href="/characters">Check the characters</a><br>
+<div class="row">
+  <h1 class="col-12">All Movies</h1>
+</div>
+<div class="row">
+  <ul>
+    {% for movie in movies %}
+    <li><a href="/movies/{{ movie.id }}">{{ movie.id }}. {{ movie.name }}</a></li>
+    {% else %}
+    <li>Nothing to display</li>
+    {% endfor %}
+  </ul>
+</div>
+<nav class="row">
+  <a href="/movies/add">Add a movie</a><br>
+  <a href="/planets">Check the planets</a><br>
+  <a href="/characters">Check the characters</a><br>
+</div>
 {% endblock %}

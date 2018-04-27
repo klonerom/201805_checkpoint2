@@ -1,12 +1,19 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Character : {{ character.name }}</h1>
-    <ul>
-        <li>Area : {{ character.area }}</li>
-        <li>Size : {{ character.size }}m</li>
-        <li>Planet : {{ character.planet }}</li>
-        <li>Movie : {{ character.movie }}</li>
-    </ul>
-    <a href="/characters">Back</a>
+<div class="row">
+  <h1 class="col-12">Character : {{ character.name }}</h1>
+</div>
+<div class="row detail">
+  <figure class="col-12 col-md-4">
+    <img src="{{ character.picture }}" class="img-fluid"/>
+  </figure>
+  <div class="col-12 col-md-8">
+    <p>Area : {{ character.area }}</p>
+    <p>Size : {{ character.size }}m</p>
+    <p>Planet : {{ character.planet }}</p>
+    <p>Movie : {{ character.movie }}</p>
+  </div>
+</div>
+<a href="/characters">Back</a>
 {% endblock %}
