@@ -42,13 +42,14 @@ abstract class AbstractManager
      */
     public function selectAll(): array
     {
-        return $this->pdoConnection->query('SELECT * FROM ' . $this->table)->fetchAll(\PDO::FETCH_CLASS, $this->className);
+        return $this->pdoConnection->query('SELECT * FROM ' . $this->table)
+            ->fetchAll(\PDO::FETCH_CLASS, $this->className);
     }
 
     /**
      * Get one row from database by ID.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return array
      */
@@ -86,7 +87,7 @@ abstract class AbstractManager
 
 
     /**
-     * @param int   $id   Id of the row to update
+     * @param int $id Id of the row to update
      * @param array $data $data to update
      */
     public function update(int $id, array $data)

@@ -13,10 +13,9 @@ use Model\Movie;
 use Model\MovieManager;
 
 /**
- * Class ItemController
- *
+ * Class MovieController
  */
-class moviesController extends AbstractController
+class MovieController extends AbstractController
 {
 
     /**
@@ -35,7 +34,7 @@ class moviesController extends AbstractController
     /**
      * Display item informations specified by $id
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return string
      */
@@ -57,6 +56,4 @@ class moviesController extends AbstractController
         // TODO : add a new item
         return $this->twig->render('Movie/add.html.twig');
     }
-
-
 }

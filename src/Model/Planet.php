@@ -11,7 +11,6 @@ namespace Model;
 
 /**
  * Class Item
- *
  */
 class Planet
 {
@@ -54,5 +53,4 @@ class Planet
     {
         $this->name = $name;
     }
-
 }

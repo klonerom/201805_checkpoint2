@@ -14,19 +14,19 @@ $routes = [
     ['index', '/', 'GET'], // action, url, method
     ['error', '/error/{error:\d+}', 'GET'], // action, url, method
   ],
-  'Characters' => [ // Controller
+  'Character' => [ // Controller
     ['list', '/characters', 'GET'], // action, url, method
     ['details', '/characters/{id:\d+}', 'GET'], // action, url, method
     ['add', '/characters/add', 'GET'], // action, url, method
     ['add', '/characters/add', 'POST'], // action, url, method
   ],
-  'Planets' => [ // Controller
+  'Planet' => [ // Controller
     ['list', '/planets', 'GET'], // action, url, method
     ['details', '/planets/{id:\d+}', 'GET'], // action, url, method
     ['add', '/planets/add', 'GET'], // action, url, method
     ['add', '/planets/add', 'POST'], // action, url, method
   ],
-  'Movies' => [ // Controller
+  'Movie' => [ // Controller
     ['list', '/movies', 'GET'], // action, url, method
     ['details', '/movies/{id:\d+}', 'GET'], // action, url, method
     ['add', '/movies/add', 'GET'], // action, url, method

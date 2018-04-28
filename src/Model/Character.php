@@ -11,7 +11,6 @@ namespace Model;
 
 /**
  * Class Item
- *
  */
 class Character
 {
