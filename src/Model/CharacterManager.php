@@ -17,9 +17,6 @@ class CharacterManager extends AbstractManager
 {
     const TABLE = '`character`';
 
-    /**
-     *  Initializes this class.
-     */
     public function __construct()
     {
         parent::__construct(self::TABLE);
@@ -37,8 +34,7 @@ class CharacterManager extends AbstractManager
      * Get one row from database by ID.
      *
      * @param int $id
-     *
-     * @return array
+     * @return Character
      */
     public function selectOneById(int $id)
     {
