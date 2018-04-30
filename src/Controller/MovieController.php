@@ -25,8 +25,7 @@ class MovieController extends AbstractController
      */
     public function list()
     {
-        $movieManager = new MovieManager();
-        $movies = $movieManager->selectAll();
+        //TODO : A page which display all movies from database.
 
         return $this->twig->render('Movie/list.html.twig', ['movies' => $movies]);
     }
@@ -53,7 +52,7 @@ class MovieController extends AbstractController
      */
     public function add()
     {
-        // TODO : add a new item
+        // TODO : A creation page where you can add a movie.
         return $this->twig->render('Movie/add.html.twig');
     }
 }

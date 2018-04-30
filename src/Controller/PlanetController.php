@@ -25,10 +25,9 @@ class PlanetController extends AbstractController
      */
     public function list()
     {
-        $planetManager = new PlanetManager();
-        $planets = $planetManager->selectAll();
+        //TODO : A page which display all planets from database.
 
-        return $this->twig->render('Planet/list.html.twig', ['planets' => $planets]);
+        return $this->twig->render('Planet/list.html.twig');
     }
 
     /**
@@ -53,7 +52,7 @@ class PlanetController extends AbstractController
      */
     public function add()
     {
-        // TODO : add a new item
+        // TODO : A creation page where you can add a planet.
         return $this->twig->render('Planet/add.html.twig');
     }
 }
