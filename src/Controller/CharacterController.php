@@ -14,9 +14,8 @@ use Model\CharacterManager;
 
 /**
  * Class ItemController
- *
  */
-class charactersController extends AbstractController
+class CharacterController extends AbstractController
 {
 
     /**
@@ -35,7 +34,7 @@ class charactersController extends AbstractController
     /**
      * Display item informations specified by $id
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return string
      */
@@ -57,5 +56,4 @@ class charactersController extends AbstractController
         // TODO : add a new item
         return $this->twig->render('Character/add.html.twig');
     }
-
 }

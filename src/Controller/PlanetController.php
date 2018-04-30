@@ -13,10 +13,9 @@ use Model\Planet;
 use Model\PlanetManager;
 
 /**
- * Class ItemController
- *
+ * Class PlanetController
  */
-class planetsController extends AbstractController
+class PlanetController extends AbstractController
 {
 
     /**
@@ -35,7 +34,7 @@ class planetsController extends AbstractController
     /**
      * Display item informations specified by $id
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return string
      */
@@ -57,5 +56,4 @@ class planetsController extends AbstractController
         // TODO : add a new item
         return $this->twig->render('Planet/add.html.twig');
     }
-
 }

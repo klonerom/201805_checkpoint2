@@ -57,5 +57,4 @@ class Movie
     {
         $this->name = $name;
     }
-
 }

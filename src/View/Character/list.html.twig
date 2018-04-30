@@ -1,21 +1,21 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<div class="row">
-  <h1 class="col-12">All Characters</h1>
-</div>
-<div class="row">
-  <ul class="list">
-    {% for character in characters %}
-      <li><a href="/characters/{{ character.id }}">{{ character.id }}. {{ character.name }}</a></li>
-    {% else %}
-      <li>Nothing to display</li>
-    {% endfor %}
-  </ul>
-</div>
-<nav class="row">
-  <a href="/characters/add">Add a character</a>
-  <a href="/movies">Check the movies</a>
-  <a href="/planets">Check the planets</a>
-</nav>
+    <div class="row">
+        <h1 class="col-12">All Characters</h1>
+    </div>
+    <div class="row">
+        <ul class="list">
+            {% for character in characters %}
+                <li><a href="/characters/{{ character.id }}">{{ character.id }}. {{ character.name }}</a></li>
+            {% else %}
+                <li>Nothing to display</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <nav class="row">
+        <a href="/characters/add">Add a character</a>
+        <a href="/movies">Check the movies</a>
+        <a href="/planets">Check the planets</a>
+    </nav>
 {% endblock %}
