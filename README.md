@@ -24,4 +24,4 @@ define('APP_DB_PWD', 'your_db_password');
 7. Follow instructions on the home to complete this new big quest !
 
 
-25/04/2018 @wildcodeschool.fr
+05/04/2018 @wildcodeschool.fr
