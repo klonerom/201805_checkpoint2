@@ -7,14 +7,15 @@
 <div class="row">
   <ul class="list">
         {% for planet in planets %}
-            <li><a href="/planets/{{ planet.id }}">{{ planet.id }}. {{ planet.name }}</a></li>
+            <li><a href="#{# Url to planet details page. #}">  Planet id.   Planet Name</a></li>
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}
     </ul>
   </div>
   <nav class="row">
-    <a href="/planets/add">Add a planet</a><br>
-    <a href="/movies">Check the movies</a><br>
-    <a href="/characters">Check the characters</a><br>
+    <a href="/planets/add">Add a planet</a>
+    <a href="/movies">Check the movies</a>
+    <a href="/characters">Check the characters</a>
+  </nav>
 {% endblock %}

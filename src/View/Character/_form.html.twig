@@ -12,7 +12,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="area">Picture :</label>
-            <input type="url" class="form-control" name="area" id="area"/>
+            <input type="url" class="form-control" name="picture" id="picture"/>
         </div>
         <div class="form-group col-md-6">
             <label for="size">Size :</label>
@@ -23,17 +23,17 @@
         <div class="form-group col-md-6">
             <label for="planet">Planet :</label>
             <select name="planet" class="custom-select" id="planet">
-                <option value="">Planet name</option>
-                <option value="">Planet name</option>
-                <option value="">Planet name</option>
+                <option value="Planet">Planet name</option>
+                <option value="Planet">Planet name</option>
+                <option value="Planet">Planet name</option>
             </select>
         </div>
         <div class="form-group col-md-6">
-            <label for="movie">Movie :</label>
-            <select name="movie" class="custom-select" id="movie">
-                <option value="">Movie title</option>
-                <option value="">Movie title</option>
-                <option value="">Movie title</option>
+            <label for="movies">Movie :</label>
+            <select name="movies[]" class="custom-select" id="movies" multiple>
+                <option value="Movie">Movie title</option>
+                <option value="Movie">Movie title</option>
+                <option value="Movie">Movie title</option>
             </select>
         </div>
     </div>

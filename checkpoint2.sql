@@ -59,14 +59,14 @@ INSERT INTO `character` (`id`, `name`, `picture`, `size`, `area`, `id_movie`, `i
 
 CREATE TABLE `movie` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `title` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `movie`
 --
 
-INSERT INTO `movie` (`id`, `name`) VALUES
+INSERT INTO `movie` (`id`, `title`) VALUES
 (1, 'Episode I : the Phantom Menace'),
 (2, 'Episode II : Attack of the Clones'),
 (3, 'Episode III : Revenge of the Sith'),

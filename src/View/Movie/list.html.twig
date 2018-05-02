@@ -7,8 +7,11 @@
 
     <div class="row">
         <ul class="list">
-            {# movies #}
-                <li><a href="{# link to movie details #}">Movie title</a></li>
+            {% for movie in movies %}
+                <li><a href="#"> Movie  id.  Movie  name</a></li>
+            {% else %}
+                <li>Nothing to display</li>
+            {% endfor %}
         </ul>
     </div>
 
