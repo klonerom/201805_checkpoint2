@@ -17,19 +17,16 @@ $routes = [
   'Character' => [ // Controller
     ['list', '/characters', 'GET'], // action, url, method
     ['details', '/characters/{id:\d+}', 'GET'], // action, url, method
-    ['add', '/characters/add', 'GET'], // action, url, method
-    ['add', '/characters/add', 'POST'], // action, url, method
+    ['add', '/characters/add', ['GET', 'POST']], // action, url, method
   ],
   'Planet' => [ // Controller
     ['list', '/planets', 'GET'], // action, url, method
     ['details', '/planets/{id:\d+}', 'GET'], // action, url, method
-    ['add', '/planets/add', 'GET'], // action, url, method
-    ['add', '/planets/add', 'POST'], // action, url, method
+    ['add', '/planets/add', ['GET', 'POST']], // action, url, method
   ],
   'Movie' => [ // Controller
     ['list', '/movies', 'GET'], // action, url, method
     ['details', '/movies/{id:\d+}', 'GET'], // action, url, method
-    ['add', '/movies/add', 'GET'], // action, url, method
-    ['add', '/movies/add', 'POST'], // action, url, method
+    ['add', '/movies/add', ['GET', 'POST']], // action, url, method
   ],
 ];
