@@ -1,58 +1,58 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: root
- * Date: 11/10/17
- * Time: 16:07
- * PHP version 7
- */
+* Created by PhpStorm.
+* User: root
+* Date: 11/10/17
+* Time: 16:07
+* PHP version 7
+*/
 
 namespace Controller;
 
-use Model\Character;
 use Model\CharacterManager;
 
 /**
- * Class ItemController
- */
+* Class ItemController
+*/
 class CharacterController extends AbstractController
 {
 
-    /**
-     * Display item listing
-     *
-     * @return string
-     */
-    public function list()
-    {
-        // TODO : A page which display all characters from data base.
+  /**
+  * Display item listing
+  *
+  * @return string
+  */
+  public function list()
+  {
+    $charactersManager = new CharacterManager();
+    $characters = $charactersManager->selectAll();
+    return $this->twig->render('Character/list.html.twig', ['characters' => $characters]);
 
-        return $this->twig->render('Character/list.html.twig');
-    }
+  }
 
-    /**
-     * Display item informations specified by $id
-     *
-     * @param int $id
-     *
-     * @return string
-     */
-    public function details(int $id)
-    {
-        // TODO : A page which displays all details of a specific characters.
+  /**
+  * Display item informations specified by $id
+  *
+  * @param int $id
+  *
+  * @return string
+  */
+  public function details(int $id)
+  {
+    // TODO : A page which displays all details of a specific characters.
 
-        return $this->twig->render('Character/details.html.twig');
-    }
+    return $this->twig->render('Character/details.html.twig');
+  }
 
-    /**
-     * Display item creation page
-     *
-     * @return string
-     */
-    public function add()
-    {
-        // TODO : A creation page where your can add a new character.
+  /**
+  * Display item creation page
+  *
+  * @return string
+  */
+  public function add()
+  {
+    // TODO : A creation page where your can add a new character.
 
-        return $this->twig->render('Character/add.html.twig');
-    }
+    return $this->twig->render('Character/add.html.twig');
+  }
 }

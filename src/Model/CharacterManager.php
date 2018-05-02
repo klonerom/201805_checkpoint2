@@ -15,29 +15,10 @@ namespace Model;
  */
 class CharacterManager extends AbstractManager
 {
-    const TABLE = '`character`';
+    const TABLE = 'character';
 
     public function __construct()
     {
         parent::__construct(self::TABLE);
-    }
-
-    /**
-     * @return array
-     */
-    public function selectAll(): array
-    {
-        //TODO : Select all characters
-    }
-
-    /**
-     * Get one row from database by ID.
-     *
-     * @param int $id
-     * @return Character
-     */
-    public function selectOneById(int $id)
-    {
-        //TODO : Select one character by Id
     }
 }

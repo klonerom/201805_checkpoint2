@@ -42,7 +42,7 @@ abstract class AbstractManager
      */
     public function selectAll(): array
     {
-        return $this->pdoConnection->query('SELECT * FROM ' . $this->table)
+        return $this->pdoConnection->query("SELECT * FROM `$this->table`")
             ->fetchAll(\PDO::FETCH_CLASS, $this->className);
     }
 
@@ -56,7 +56,7 @@ abstract class AbstractManager
     public function selectOneById(int $id)
     {
         // prepared request
-        $statement = $this->pdoConnection->prepare("SELECT * FROM $this->table WHERE id=:id");
+        $statement = $this->pdoConnection->prepare("SELECT * FROM `$this->table` WHERE id=:id");
         $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
