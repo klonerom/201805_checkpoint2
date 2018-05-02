@@ -49,6 +49,10 @@ switch ($routeInfo[0]) {
         $vars = $routeInfo[2];
         list($class, $method) = explode("/", $handler, 2);
         $class = APP_CONTROLLER_NAMESPACE . $class . APP_CONTROLLER_SUFFIX;
-        echo call_user_func_array([new $class(), $method], $vars);
+        if(is_callable([new $class(), $method])){
+          echo call_user_func_array([new $class(), $method], $vars);
+        }else{
+          header("HTTP/1.0 501 Not Implemented");
+        }
         break;
 }

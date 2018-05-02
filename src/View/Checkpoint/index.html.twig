@@ -1,91 +1,95 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-
-    <div class="row">
-        <div class="col-12 text-center">
-            <h1>Welcome here Padawan !</h1>
-            <p>On this day of <a href="https://en.wikipedia.org/wiki/Star_Wars_Day">May 4th</a>, your today's challenge
-                will be about Star Wars universe.</p>
-        </div>
+<div class="row">
+  <div class="col-12 text-center">
+    <h1>Welcome here Padawan !</h1>
+    <p>On this day of <a href="https://en.wikipedia.org/wiki/Star_Wars_Day">May 4th</a>, your today's challenge
+      will be about Star Wars universe.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>General instructions</h2>
+      <ul>
+        <li>Your code have to respect good practices and espacially PSR-1 and PSR-2. <em>N.B.: Codesniffer is
+          registered as a dev dependencie in this project.</em></li>
+          <li>You have to pushed your code on this project repository. Do it on a branch with your firstname and
+            lastname as *Arthur_DUPOND*. Think about atomic commits
+          </li>
+          <li>All the app is already designed, focus on code, not decoration.</li>
+          <li>You work for yourself, if you need help, you can ask to your trainer.</li>
+        </ul>
+      </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <h2>General instructions</h2>
-            <ul>
-                <li>Your code have to respect good practices and espacially PSR-1 and PSR-2. <em>N.B.: Codesniffer is
-                        registered as a dev dependencie in this project.</em></li>
-                <li>You have to pushed your code on this project repository. Do it on a branch with your firstname and
-                    lastname as *Arthur_DUPOND*. Think about atomic commits
-                </li>
-                <li>All the app is already designed, focus on code, not decoration.</li>
-                <li>You work for yourself, if you need help, you can ask to your trainer.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12">
-            <h2>1. Algorithm exercise</h2>
-            <p>In <samp>src/Service/String.php</samp> you have to write code wich have the same behavior as PHP native
-                function <samp>trim()</samp>.
-                All your code must be in <samp>trimer()</samp> method.
-                In PHP manual, it's describe as it :
-            <blockquote cite="http://php.net/manual/fr/function.trim.php">
-                <strong>trim</strong> — Supprime les espaces (ou d'autres caractères) en début et fin de chaîne.
-                <a href="http://php.net/manual/fr/function.trim.php" target="_blank">see more</a>
-            </blockquote>
-            <p>
-                In this checkpoint we only want you to code the basic usage of this function : <strong>removing useless
-                    white
-                    spaces before and after a string.</strong>. So ignore the second optionnal parameter of the native
-                trim
-                function.
-                <!--<em>If you are in a good feeling, you can try to remove other characters which would be given in a second parameter.</em>-->
-                When you'll want to test your code, you can run in command lines :
-                <code class="block">
-                    ./vendor/bin/phpunit tests/Service/StringToolsTest
-                </code>
-                If all tests are OK, you can consider your mission acomplished.
-                You can commit your work and push it on your remote branch.
-                <em>It's useless to tell you to don't use <samp>trim()</samp> function itself.</em>
+      <div class="col-12">
+        <h2>1. Algorithm exercise</h2>
+        <p>In <samp>src/Service/String.php</samp> you have to write code wich have the same behavior as PHP native
+          function <samp>trim()</samp>.
+          All your code must be in <samp>trimer()</samp> method.
+          In PHP manual, it's describe as it :
+          <blockquote cite="http://php.net/manual/fr/function.trim.php">
+            <strong>trim</strong> — Supprime les espaces (ou d'autres caractères) en début et fin de chaîne.
+            <a href="http://php.net/manual/fr/function.trim.php" target="_blank">see more</a>
+          </blockquote>
+          <p>
+            In this checkpoint we only want you to code the basic usage of this function : <strong>removing useless
+              white spaces before and after a string.</strong>. So ignore the second optionnal parameter of the native
+              trim
+              function.
+              <!--<em>If you are in a good feeling, you can try to remove other characters which would be given in a second parameter.</em>-->
+              When you'll want to test your code, you can run in command lines :
+              <code class="block">
+                ./vendor/bin/phpunit tests/Service/StringToolsTest
+              </code>
+              If all tests are OK, you can consider your mission acomplished.
+              You can commit your work and push it on your remote branch.
+              You are not allowed to use regular expressions and off course <em>you to can't use <samp>trim()</samp> function itself and all of trim familly as <samp>rtrim</samp> et <samp>ltrim</samp>.</em>
             </p>
-        </div>
+          </div>
 
-        <div class="col-12">
+          <div class="col-12">
             <h2>2. Application development</h2>
             Your next mission is to finish the back end part of a Star Wars Wiki. You can read instructions below :
             <ol>
-                <li>A page which display all characters from data base. All list items display a link to the character's
-                    details page.
-                </li>
-                <li>A page which displays all details of a specific characters, with all informations about him :
-                    everything contained in the character table.
-                </li>
-                <li>The details page also have to display the planet where she/he comes from and in which movies she/he
-                    can be seen. Those informations are contained in other tables.
-                </li>
-                <li>A creation page where your can add a new character, and give information about : the planet where
-                    she/he comes from, movies where she/he can be seen.
-                </li>
-                <li>On creation page, planets list and movies list are coming from database.</li>
-                <li>A page which display all planets from database.</li>
-                <li>A creation page where you can add a planet. Off course, when a planet is added in your app, it can
-                    be automatically selected in character creation page.
-                </li>
-                <li>A page which display all movies from database.</li>
-                <li>A creation page where you can add a movie. Off course, when a movie is added in your app, it can be
-                    automatically selected in character creation page.
-                </li>
-                <li>BONUS : If you are already done with that, you can upgrade details page in order to allow users to
-                    upload images for characters.
-                </li>
+              <li><del>A page which display all characters from data base. All list items display a link to the character's
+                details page.</del> <em>Allready done !</em>
+              </li>
+              <li>A page which displays all details of a specific characters, with all informations about him :
+                everything contained in the character table.
+              </li>
+              <li>The details page also have to display the planet where she/he comes from and in which movies she/he
+                can be seen. Those informations are contained in other tables.
+              </li>
+              <li>A creation page where your can add a new character, and give information about : the planet where
+                she/he comes from, movies where she/he can be seen.
+              </li>
+              <li>On creation page, planets list and movies list are coming from database.</li>
+              <li>A page which display all planets from database.</li>
+              <li>A creation page where you can add a planet. Off course, when a planet is added in your app, it can
+                be selected in character creation page.
+              </li>
+              <li>A page which display all movies from database.</li>
+              <li>A creation page where you can add a movie. Off course, when a movie is added in your app, it can be
+                selected in character creation page.
+              </li>
+              <li>BONUS : If you are already done with that, you can upgrade details page in order to allow users to
+                upload images for characters.
+              </li>
+              <li>BONUS II : You can add any improvement you want on this application.
+              </li>
             </ol>
+            <p>If you want to test if all routes are OK, you can try the code below. Your favorite trainer will use this to check if all routes work :
+              <code class="block">
+                ./vendor/bin/phpunit tests/AppTest.php
+              </code>
+            </p>
+          </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center">
+        <div class="row">
+          <div class="col-12 text-center">
             <img src="assets/images/May_the_4th_be_with_you_(Star_Wars_Day).gif" alt="may the force be with you"/>
+          </div>
         </div>
-    </div>
-{% endblock %}
+      {% endblock %}

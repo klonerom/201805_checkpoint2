@@ -9,9 +9,6 @@
 
 namespace Model;
 
-/**
- * Class Item
- */
 class Planet
 {
     private $id;
@@ -28,10 +25,9 @@ class Planet
 
     /**
      * @param mixed $id
-     *
-     * @return Item
+     * @return Planet
      */
-    public function setId($id): Item
+    public function setId($id) : Planet
     {
         $this->id = $id;
 

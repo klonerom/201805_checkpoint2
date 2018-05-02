@@ -28,10 +28,9 @@ class Character
 
     /**
      * @param mixed $id
-     *
-     * @return Item
+     * @return Character
      */
-    public function setId($id): Item
+    public function setId($id): Character
     {
         $this->id = $id;
 
