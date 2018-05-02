@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: root
+ * User: wcs
  * Date: 11/10/17
  * Time: 15:38
  * PHP version 7
@@ -11,7 +11,6 @@ namespace Controller;
 
 use Twig_Loader_Filesystem;
 use Twig_Environment;
-
 
 abstract class AbstractController
 {
