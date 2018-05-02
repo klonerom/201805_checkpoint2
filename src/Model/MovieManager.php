@@ -9,19 +9,12 @@
 
 namespace Model;
 
-/**
- *
- */
 class MovieManager extends AbstractManager
 {
     const TABLE = 'movie';
 
-
-    /**
-     *  Initializes this class.
-     */
     public function __construct()
     {
         parent::__construct(self::TABLE);
-    }//end __construct()
-}//end class
+    }
+}

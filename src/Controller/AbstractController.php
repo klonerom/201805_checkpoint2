@@ -12,9 +12,7 @@ namespace Controller;
 use Twig_Loader_Filesystem;
 use Twig_Environment;
 
-/**
- *
- */
+
 abstract class AbstractController
 {
 
@@ -35,5 +33,5 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new \Twig_Extension_Debug());
-    }//end __construct()
-}//end class
+    }
+}

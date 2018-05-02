@@ -9,16 +9,11 @@
 
 namespace Model;
 
-/**
- * Class Item
- */
 class Movie
 {
-
     private $id;
 
     private $name;
-
 
     /**
      * @return integer
@@ -26,21 +21,18 @@ class Movie
     public function getId(): int
     {
         return $this->id;
-    }//end getId()
-
+    }
 
     /**
      * @param mixed $id
-     *
-     * @return Item
+     * @return Movie
      */
-    public function setId($id): Item
+    public function setId($id): Movie
     {
         $this->id = $id;
 
         return $this;
-    }//end setId()
-
+    }
 
     /**
      * @return mixed
