@@ -1,4 +1,4 @@
-# Checkpoint 2 | May the force be with you | Php 0218
+# Checkpoint 2 | May the force be with you | PHP0218
 
 ## Description
 
