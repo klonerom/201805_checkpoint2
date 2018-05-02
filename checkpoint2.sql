@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Ven 27 Avril 2018 à 18:12
+-- Généré le :  Mer 02 Mai 2018 à 10:19
 -- Version du serveur :  5.7.22-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.29-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -51,6 +51,60 @@ INSERT INTO `character` (`id`, `name`, `picture`, `size`, `area`, `id_movie`, `i
 (14, 'Ewok', 'https://lumiere-a.akamaihd.net/v1/images/databank_ewok_01_169_747db03a.jpeg?region=0%2C0%2C1560%2C878&width=768', 1, 'forest', 6, 14),
 (15, 'Porg', 'https://lumiere-a.akamaihd.net/v1/images/porg-main_16933d3b.jpeg?region=0%2C0%2C1560%2C878&width=768', 1, 'Cliff', 8, 15);
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `movie`
+--
+
+CREATE TABLE `movie` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `movie`
+--
+
+INSERT INTO `movie` (`id`, `name`) VALUES
+(1, 'Episode I : the Phantom Menace'),
+(2, 'Episode II : Attack of the Clones'),
+(3, 'Episode III : Revenge of the Sith'),
+(4, 'Episode IV : A New Hope'),
+(5, 'Episode V : The Empire Strikes Back'),
+(6, 'Episode VI : Return of the Jedi'),
+(7, 'Episode VII : The Force Awakens'),
+(8, 'Episode VIII : The Last Jedi');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `planet`
+--
+
+CREATE TABLE `planet` (
+  `id` int(11) NOT NULL,
+  `name` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `planet`
+--
+
+INSERT INTO `planet` (`id`, `name`) VALUES
+(3, 'Mandalore'),
+(4, 'Coruscant'),
+(5, 'Dagobah'),
+(6, 'Geonosis'),
+(7, 'Hoth'),
+(8, 'Jakku'),
+(9, 'Kashyyyk'),
+(10, 'Naboo'),
+(12, 'Tatooine'),
+(13, 'Utapau'),
+(14, 'Endor'),
+(15, 'Ahch-To');
+
 --
 -- Index pour les tables exportées
 --
@@ -64,6 +118,18 @@ ALTER TABLE `character`
   ADD KEY `id_planet` (`id_planet`);
 
 --
+-- Index pour la table `movie`
+--
+ALTER TABLE `movie`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `planet`
+--
+ALTER TABLE `planet`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -72,6 +138,16 @@ ALTER TABLE `character`
 --
 ALTER TABLE `character`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT pour la table `movie`
+--
+ALTER TABLE `movie`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT pour la table `planet`
+--
+ALTER TABLE `planet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- Contraintes pour les tables exportées
 --
