@@ -25,10 +25,9 @@ class CharacterController extends AbstractController
      */
     public function list()
     {
-        $charactersManager = new CharacterManager();
-        $characters = $charactersManager->selectAll();
+        // TODO : A page which display all characters from data base.
 
-        return $this->twig->render('Character/list.html.twig', ['characters' => $characters]);
+        return $this->twig->render('Character/list.html.twig');
     }
 
     /**
@@ -40,10 +39,9 @@ class CharacterController extends AbstractController
      */
     public function details(int $id)
     {
-        $charactersManager = new CharacterManager();
-        $character = $charactersManager->selectOneById($id);
+        // TODO : A page which displays all details of a specific characters.
 
-        return $this->twig->render('Character/details.html.twig', ['character' => $character]);
+        return $this->twig->render('Character/details.html.twig');
     }
 
     /**
@@ -53,7 +51,8 @@ class CharacterController extends AbstractController
      */
     public function add()
     {
-        // TODO : add a new item
+        // TODO : A creation page where your can add a new character.
+
         return $this->twig->render('Character/add.html.twig');
     }
 }

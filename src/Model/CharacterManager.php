@@ -27,7 +27,7 @@ class CharacterManager extends AbstractManager
      */
     public function selectAll(): array
     {
-        return $this->pdoConnection->query('SELECT * FROM ' . $this->table, \PDO::FETCH_ASSOC)->fetchAll();
+        //TODO : Select all characters
     }
 
     /**
@@ -38,19 +38,6 @@ class CharacterManager extends AbstractManager
      */
     public function selectOneById(int $id)
     {
-        // prepared request
-        $statement = $this->pdoConnection->prepare(
-            "
-            SELECT $this->table.id, $this->table.name, $this->table.picture, size, area, planet.name as planet,
-             movie.name as movie 
-            FROM $this->table INNER JOIN movie ON id_movie=movie.id
-            INNER JOIN planet ON id_planet = planet.id WHERE $this->table.id=:id"
-        );
-        //$statement = $this->pdoConnection->prepare("SELECT * FROM $this->table WHERE id=:id");
-        $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
-        $statement->execute();
-
-        return $statement->fetch();
+        //TODO : Select one character by Id
     }
 }
