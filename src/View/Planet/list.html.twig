@@ -6,16 +6,12 @@
 </div>
 <div class="row">
   <ul class="list">
-        {% for planet in planets %}
-            <li><a href="#{# Url to planet details page. #}">  Planet id.   Planet Name</a></li>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
-    </ul>
-  </div>
-  <nav class="row">
-    <a href="/planets/add">Add a planet</a>
-    <a href="/movies">Check the movies</a>
-    <a href="/characters">Check the characters</a>
-  </nav>
+    <li><a href="#{# Url to planet details page. #}">  Planet id.   Planet Name</a></li>
+  </ul>
+</div>
+<nav class="row">
+  <a href="/planets/add">Add a planet</a>
+  <a href="/movies">Check the movies</a>
+  <a href="/characters">Check the characters</a>
+</nav>
 {% endblock %}

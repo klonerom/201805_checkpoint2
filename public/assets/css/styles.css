@@ -49,6 +49,10 @@ h2, strong {
 a {
   color : #FFD200;
   font-family: starjedi;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 300;
 }
 a:hover{
   color : #FFD200;

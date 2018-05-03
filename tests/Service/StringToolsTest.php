@@ -11,7 +11,7 @@ final class StringToolsTest extends TestCase
   */
     public function testHelloWilder($sample): void
     {
-        $this->assertSame('hello wilder', Service\StringTools::trimWhiteSpaces($sample));
+        $this->assertSame('hello wilder', \Service\StringTools::trimWhiteSpaces($sample));
     }
 
 
