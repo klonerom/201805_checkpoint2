@@ -12,7 +12,7 @@ namespace Model;
 /**
  * Class Item
  */
-class Character
+class Beast
 {
     private $id;
 
@@ -28,9 +28,9 @@ class Character
 
     /**
      * @param mixed $id
-     * @return Character
+     * @return Beast
      */
-    public function setId($id): Character
+    public function setId($id): Beast
     {
         $this->id = $id;
 

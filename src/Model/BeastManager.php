@@ -10,12 +10,12 @@
 namespace Model;
 
 /**
- * Class CharacterManager
+ * Class BeastManager
  * @package Model
  */
-class CharacterManager extends AbstractManager
+class BeastManager extends AbstractManager
 {
-    const TABLE = 'character';
+    const TABLE = 'beast';
 
     public function __construct()
     {

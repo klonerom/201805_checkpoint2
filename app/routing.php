@@ -14,11 +14,11 @@ $routes = [
     ['index', '/', 'GET'], // action, url, method
     ['error', '/error/{error:\d+}', 'GET'], // action, url, method
   ],
-  'Character' => [ // Controller
-    ['list', '/characters', 'GET'], // action, url, method
-    ['details', '/characters/{id:\d+}', 'GET'], // action, url, method
-    ['add', '/characters/add', ['GET', 'POST']], // action, url, method
-    ['edit', '/characters/{id:\d+}/edit', ['GET', 'POST']], // action, url, method
+  'Beast' => [ // Controller
+    ['list', '/beasts', 'GET'], // action, url, method
+    ['details', '/beasts/{id:\d+}', 'GET'], // action, url, method
+    ['add', '/beasts/add', ['GET', 'POST']], // action, url, method
+    ['edit', '/beasts/{id:\d+}/edit', ['GET', 'POST']], // action, url, method
   ],
   'Planet' => [ // Controller
     ['list', '/planets', 'GET'], // action, url, method

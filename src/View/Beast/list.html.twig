@@ -2,19 +2,19 @@
 
 {% block content %}
     <div class="row">
-        <h1 class="col-12">All Characters</h1>
+        <h1 class="col-12">All Beasts</h1>
     </div>
     <div class="row">
         <ul class="list">
-            {% for character in characters %}
-                <li><a href="/characters/{{ character.id }}">{{ character.id }}. {{ character.name }}</a></li>
+            {% for beast in beasts %}
+                <li><a href="/beasts/{{ beast.id }}">{{ beast.id }}. {{ beast.name }}</a></li>
             {% else %}
                 <li>Nothing to display</li>
             {% endfor %}
         </ul>
     </div>
     <nav class="row">
-        <a href="/characters/add">Add a character</a>
+        <a href="/beasts/add">Add a beast</a>
         <a href="/movies">Check the movies</a>
         <a href="/planets">Check the planets</a>
     </nav>

@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `character`
+-- Structure de la table `beast`
 --
 
-CREATE TABLE `character` (
+CREATE TABLE `beast` (
   `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `picture` varchar(255) NOT NULL DEFAULT 'http://via.placeholder.com/350x300',
@@ -31,10 +31,10 @@ CREATE TABLE `character` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `character`
+-- Contenu de la table `beast`
 --
 
-INSERT INTO `character` (`id`, `name`, `picture`, `size`, `area`, `id_movie`, `id_planet`) VALUES
+INSERT INTO `beast` (`id`, `name`, `picture`, `size`, `area`, `id_movie`, `id_planet`) VALUES
 (1, 'Orray', 'https://lumiere-a.akamaihd.net/v1/images/orray_05827d60.jpeg?region=374%2C0%2C1186%2C667&width=768', 2, 'desert', 2, 6),
 (2, 'Massiff', 'http://via.placeholder.com/350x300', 1, 'Desert', 2, 6),
 (3, 'Wampa', 'https://lumiere-a.akamaihd.net/v1/images/image_c3ce73b0.jpeg?region=0%2C0%2C1920%2C1080&width=768', 3, 'Cave', 5, 7),
@@ -110,9 +110,9 @@ INSERT INTO `planet` (`id`, `name`) VALUES
 --
 
 --
--- Index pour la table `character`
+-- Index pour la table `beast`
 --
-ALTER TABLE `character`
+ALTER TABLE `beast`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_movie` (`id_movie`),
   ADD KEY `id_planet` (`id_planet`);
@@ -134,9 +134,9 @@ ALTER TABLE `planet`
 --
 
 --
--- AUTO_INCREMENT pour la table `character`
+-- AUTO_INCREMENT pour la table `beast`
 --
-ALTER TABLE `character`
+ALTER TABLE `beast`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT pour la table `movie`
@@ -153,8 +153,8 @@ ALTER TABLE `planet`
 --
 
 --
--- Contraintes pour la table `character`
+-- Contraintes pour la table `beast`
 --
-ALTER TABLE `character`
-  ADD CONSTRAINT `character_ibfk_1` FOREIGN KEY (`id_planet`) REFERENCES `planet` (`id`),
-  ADD CONSTRAINT `character_ibfk_2` FOREIGN KEY (`id_movie`) REFERENCES `movie` (`id`);
+ALTER TABLE `beast`
+  ADD CONSTRAINT `beast_ibfk_1` FOREIGN KEY (`id_planet`) REFERENCES `planet` (`id`),
+  ADD CONSTRAINT `beast_ibfk_2` FOREIGN KEY (`id_movie`) REFERENCES `movie` (`id`);
