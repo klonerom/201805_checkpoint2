@@ -27,19 +27,18 @@
       <div class="col-12">
         <h2>1. Algorithm exercise</h2>
         <p>In <samp>src/Service/String.php</samp> you have to write code wich have the same behavior as PHP native
-          function <samp>trim()</samp>.
-          In PHP manual, it's describe as it :
-          <blockquote cite="http://php.net/manual/fr/function.trim.php">
-            <strong>trim</strong> — Strip whitespace (or other characters) from the beginning and end of a string.
-            <a href="http://php.net/manual/en/function.trim.php" target="_blank">see more</a>
+          function <samp>ltrim()</samp>.
+          In PHP manual, it's described as :
+          <blockquote cite="http://php.net/manual/en/function.ltrim.php">
+            <strong>ltrim</strong> — Strip whitespace (or other characters) from the beginning of a string
+            <a href="http://php.net/manual/en/function.ltrim.php" target="_blank">see more</a>
           </blockquote>
           <p>
             All your code must be contained in <samp>trimWhiteSpaces()</samp> method.
             You are not allowed to use regular expressions and of course
-            <em>you can't use <samp>trim()</samp> function itself and all of trim familly as <samp>rtrim()</samp> or <samp>ltrim()</samp>.</em>
+            <em>you can't use <samp>ltrim()</samp> function itself and all of trim familly as <samp>trim()</samp>.</em>
             In this checkpoint we only want you to code the basic usage of this function :
-            <strong>removing useless white spaces before and after a string.</strong>. So ignore the second optionnal parameter of the native trim function.
-            <!--<em>If you are in a good feeling, you can try to remove other characters which would be given in a second parameter.</em>-->
+            <strong>removing useless white spaces before a string.</strong>. So ignore the second optionnal parameter of the native ltrim function.
             When you'll want to test your code, you can run in command lines :
             <code class="block">
               ./vendor/bin/phpunit tests/Service/StringToolsTest
@@ -63,8 +62,13 @@
             <li>The details page also have to display the planet where she/he comes from and in which movies she/he
               can be seen. Those informations are contained in other tables.
             </li>
-            <li>A creation page where your can add a new character, and give information about : the planet where
+            <li>A creation page where your can add a new character, and give informations about : the planet where
               she/he comes from, movies where she/he can be seen. <a href="https://dev.mysql.com/doc/refman/5.7/en/join.html">#jointures</a>
+            </li>
+            <li>An edition page where your can edit a selected character, and update informations about : the planet where
+              she/he comes from, movies where she/he can be seen.
+            </li>
+            <li>On the edition page, you can find a delete button, which allow you to remove a character from the database.
             </li>
             <li>On creation page, planets list and movies list are coming from database.
               <em>A character can be seen in multiple movies. You can start by allowing only one movie per characters, at least, your form have to handle multiple movies for one character.</em>

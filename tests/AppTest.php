@@ -26,7 +26,6 @@ class AppTest extends TestCase
   */
     public function testStatusSucces($url)
     {
-        var_dump(self::SERVER . $url);
         $res = $this->client->request('GET', self::SERVER . $url);
         $status = $res->getStatusCode();
         $this->assertEquals(200, $status);

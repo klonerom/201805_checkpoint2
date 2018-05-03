@@ -22,12 +22,12 @@ class CharacterController extends AbstractController
   *
   * @return string
   */
-    public function list()
-    {
-        $charactersManager = new CharacterManager();
-        $characters = $charactersManager->selectAll();
-        return $this->twig->render('Character/list.html.twig', ['characters' => $characters]);
-    }
+  public function list()
+  {
+    $charactersManager = new CharacterManager();
+    $characters = $charactersManager->selectAll();
+    return $this->twig->render('Character/list.html.twig', ['characters' => $characters]);
+  }
 
   /**
   * Display item informations specified by $id
@@ -36,22 +36,32 @@ class CharacterController extends AbstractController
   *
   * @return string
   */
-    public function details(int $id)
-    {
-      // TODO : A page which displays all details of a specific characters.
+  public function details(int $id)
+  {
+    // TODO : A page which displays all details of a specific characters.
 
-        return $this->twig->render('Character/details.html.twig');
-    }
+    return $this->twig->render('Character/details.html.twig');
+  }
 
   /**
   * Display item creation page
   *
   * @return string
   */
-    public function add()
-    {
-      // TODO : A creation page where your can add a new character.
+  public function add()
+  {
+    // TODO : A creation page where your can add a new character.
 
-        return $this->twig->render('Character/add.html.twig');
-    }
+    return $this->twig->render('Character/add.html.twig');
+  }
+  /**
+  * Display item creation page
+  *
+  * @return string
+  */
+  public function edit()
+  {
+    // TODO : An edition page where your can add a new character.
+    return $this->twig->render('Character/edit.html.twig');
+  }
 }

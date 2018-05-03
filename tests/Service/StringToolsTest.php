@@ -18,12 +18,9 @@ final class StringToolsTest extends TestCase
     public function helloStringProvider()
     {
         return [
-        'removing one white space before'  => [' hello wilder'],
-        'removing one white space after'  => ['hello wilder '],
-        'removing one white space before and after'  => [' hello wilder '],
-        'removing two white spaces before'  => ['  hello wilder'],
-        'removing three white space after'  => ['hello wilder   '],
-        'removing many white spaces after and before'  => ['       hello wilder         '],
+          'removing one white space before'  => [' hello wilder'],
+          'removing two white spaces before'  => ['  hello wilder'],
+          'removing many white spaces after and before'  => ['       hello wilder'],
         ];
     }
 }
