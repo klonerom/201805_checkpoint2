@@ -27,6 +27,7 @@ body {
 
 .main {
     min-height: 80vh;
+    margin-top: 40px;
 }
 
 h1 {
@@ -63,8 +64,8 @@ a {
 
 samp,
 em {
-    color: #FFD200;
-    font-size: 1.1em;
+    color: #FAC800;
+    font-size: 0.9em;
 }
 
 blockquote {
@@ -246,4 +247,8 @@ nav.row {
 .danger {
     color: #D62924 !important;
     border-color: #D62924 !important;
+}
+
+.navbar {
+    background-color: #FFD200;
 }
