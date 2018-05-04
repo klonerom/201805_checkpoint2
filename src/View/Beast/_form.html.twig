@@ -2,38 +2,38 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="title">Name :</label>
-            <input type="text" class="form-control" name="name">
+            <input type="text" class="form-control" name="name" value="{% if beast.name %}{{ beast.name }}{% endif %}"/>
         </div>
         <div class="form-group col-md-6">
             <label for="area">Area :</label>
-            <input type="text" class="form-control" name="area">
+            <input type="text" class="form-control" name="area" value="{% if beast.area %}{{ beast.area }}{% endif %}"/>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="area">Picture :</label>
-            <input type="url" class="form-control" name="picture" id="picture" value="http://via.placeholder.com/350x300"/>
+            <input type="url" class="form-control" name="picture" id="picture" value="{% if beast.picture %}{{ beast.picture }}{% else %}http://via.placeholder.com/350x300{% endif %}"/>
         </div>
         <div class="form-group col-md-6">
             <label for="size">Size (in meter):</label>
-            <input type="text" class="form-control" name="size" id="size"/>
+            <input type="text" class="form-control" name="size" id="size" value="{% if beast.size %}{{ beast.size }}{% endif %}"/>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="planet">Planet :</label>
+            <label for="planet">Planet :{{ beast.idPlanet }}</label>
             <select name="planet" class="custom-select" id="planet">
                 <option value="" selected>Select Planet ...</option>
                 {% for planet in planets %}
-                    <option value="{{ planet.id }}">{{ planet.name }}</option>
+                    <option value="{{ planet.id }}" {% if beast.idPlanet == planet.id %}selected{% endif %}>{{ planet.name }}</option>
                 {% endfor %}
             </select>
         </div>
         <div class="form-group col-md-6">
-            <label for="movies">Movie :</label>
-            <select name="movies[]" class="custom-select" id="movies" multiple>
+            <label for="movie">Movie :{{ beast.idMovie }}</label>
+            <select name="movie" class="custom-select" id="movie">
                 {% for movie in movies %}
-                <option value="{{ movie.id }}">{{ movie.title }}</option>
+                <option value="{{ movie.id }}" {% if beast.idMovie == movie.id %}selected{% endif %}>{{ movie.title }}</option>
                 {% endfor %}
             </select>
         </div>

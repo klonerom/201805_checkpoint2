@@ -9,6 +9,8 @@
 
 namespace Controller;
 
+use A\B;
+use Model\Beast;
 use Model\BeastManager;
 use Model\MovieManager;
 use Model\PlanetManager;
@@ -55,23 +57,20 @@ class BeastController extends AbstractController
   */
   public function add()
   {
-      $beast = [];
 
       if (!empty($_POST)) {
-          $beast = [
-              'name' => $_POST['name'],
-              'picture' => $_POST['picture'],
-              'size' => (int) $_POST['size'],
-              'area' => $_POST['area'],
-              'id_movie' => (int) $_POST['movies'][0], //Only the 1 selected
-              'id_planet' => (int) $_POST['planet'],
-          ];
+          $beast = new Beast();
+          //Fill in beast object with $_POST info
+          $beast->hydrate($_POST);
 
           $beastManager = new BeastManager();
-          $beastManager->insert($beast);
+          $beastManager->insert($beast->toArray());
 
-//      header('Location: /');
-//      die;
+          header('Location: /beasts');
+          die;
+      } else {
+          $beast = new Beast();
+          $beast->hydrate($_POST);
       }
 
       //List of movies
@@ -93,9 +92,40 @@ class BeastController extends AbstractController
   *
   * @return string
   */
-  public function edit()
+  public function edit(int $id)
   {
-    // TODO : An edition page where your can add a new beast.
-    return $this->twig->render('Beast/edit.html.twig');
+
+      if (!empty($_POST)) {
+          $beast = new Beast();
+          //Fill in beast object with $_POST info
+          $beast->hydrate($_POST);
+
+          $beastManager = new BeastManager();
+          //toArray for transform object to array
+          $beastManager->update($id, $beast->toArray());
+
+          header('Location: /beasts');
+          die;
+      }
+
+      //List of beasts
+      $beastManager = new BeastManager();
+      $beast = $beastManager->selectOneById($id);
+
+      if ($beast) {
+          //civility object
+          $movieManager = new MovieManager();
+          $movies = $movieManager->selectAll(); //Complete list of civilities (for select in twig)
+
+          //List of planets
+          $planetManager = new PlanetManager();
+          $planets = $planetManager->selectAll();
+
+          return $this->twig->render('Beast/edit.html.twig', [
+              'beast' => $beast,
+              'movies' => $movies,
+              'planets' => $planets,
+          ]);
+      }
   }
 }
