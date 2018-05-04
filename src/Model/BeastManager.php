@@ -21,4 +21,40 @@ class BeastManager extends AbstractManager
     {
         parent::__construct(self::TABLE);
     }
+
+    /**
+     * Get one row from database by ID JOIN to planet and movie tables.
+     *
+     * @param int $id
+     *
+     * @return array
+     */
+    public function selectOneBeastById(int $id)
+    {
+        // prepared request
+        $statement = $this->pdoConnection->prepare("SELECT beast.id, beast.name, beast.picture, beast.size, beast.area, planet.name  as planetName, movie.title as movieTitle FROM planet JOIN beast ON beast.id_planet = planet.id JOIN movie ON movie.id = beast.id_movie WHERE beast.id = :id");
+        $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
+    }
+
+    /**
+     * INSERT one row in database
+     *
+     * @param Array $data
+     */
+    public function insert(array $data)
+    {
+        var_dump($data);
+        $statement = $this->pdoConnection->prepare("INSERT INTO $this->table (name, picture, size, area, id_movie, id_planet) VALUES (:name, :picture, :size, :area, :id_movie, :id_planet)");
+        $statement->bindValue('name', $data['name'], \PDO::PARAM_STR);
+        $statement->bindValue('picture', $data['picture'], \PDO::PARAM_STR);
+        $statement->bindValue('size', $data['size'], \PDO::PARAM_INT);
+        $statement->bindValue('area', $data['area'], \PDO::PARAM_STR);
+        $statement->bindValue('id_movie', $data['id_movie'], \PDO::PARAM_INT);
+        $statement->bindValue('id_planet', $data['id_planet'], \PDO::PARAM_INT);
+        $statement->execute();
+    }
 }
