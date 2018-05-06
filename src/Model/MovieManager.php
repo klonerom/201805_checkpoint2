@@ -10,7 +10,7 @@
 namespace Model;
 
 /**
- * Class BeastManager
+ * Class MovieManager
  * @package Model
  */
 class MovieManager extends AbstractManager

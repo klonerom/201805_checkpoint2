@@ -127,4 +127,18 @@ class BeastController extends AbstractController
             ]);
         }
     }
+
+    /**
+     * Delete Beast
+     * @param int $id
+     */
+    public function delete(int $id)
+    {
+        $id = (int) $id;
+        $beastManager = new BeastManager();
+        $beast = $beastManager->deleteById($id);
+
+        header('Location: /beasts');
+        die;
+    }
 }
