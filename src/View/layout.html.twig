@@ -19,6 +19,7 @@
     {% include "_header.html.twig" %}
 {% endblock %}
 <main class="container main">
+    {% block message %}{% endblock %}
     {% block content %}{% endblock %}
 </main>
 {% block footer %}

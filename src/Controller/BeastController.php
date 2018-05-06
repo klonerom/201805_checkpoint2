@@ -57,19 +57,33 @@ class BeastController extends AbstractController
     */
     public function add()
     {
+        $message = null; //error message
+
+        //Beast is transform to object because Twig wait an object in this case
+        $beast = new Beast();
+
         if (!empty($_POST)) {
-            $beast = new Beast();
             //Fill in beast object with $_POST info
+            //$_POST array transform to Beast object
             $beast->hydrate($_POST);
 
-            $beastManager = new BeastManager();
-            $beastManager->insert($beast->toArray());
+            if (!empty($beast->getName()) && !empty($beast->getArea()) && !empty($beast->getSize()) && !empty($beast->getIdPlanet()) && !empty($beast->getIdMovie())) {
+                $beastManager = new BeastManager();
+                //toArray for transform object to array
+                $beastManager->insert($beast->toArray());
 
-            header('Location: /beasts');
-            die;
-        } else {
-            $beast = new Beast();
-            $beast->hydrate($_POST);
+                header('Location: /beasts');
+                die;
+
+            } else {
+                $_SESSION['message'] = 'Some fields are empty, please fill in !'; //all fields are not filled in
+            }
+        }
+
+        //display error message when form is bad filled in
+        if (isset($_SESSION['message'])) {
+            $message = $_SESSION['message'];
+            unset($_SESSION['message']);
         }
 
         //List of movies
@@ -84,6 +98,7 @@ class BeastController extends AbstractController
             'beast' => $beast,
             'movies' => $movies,
             'planets' => $planets,
+            'message' => $message,
         ]);
     }
 
@@ -94,22 +109,35 @@ class BeastController extends AbstractController
     */
     public function edit(int $id)
     {
-        if (!empty($_POST)) {
-            $beast = new Beast();
-            //Fill in beast object with $_POST info
-            $beast->hydrate($_POST);
+        $message = null; //error message
 
-            $beastManager = new BeastManager();
-            //toArray for transform object to array
-            $beastManager->update($id, $beast->toArray());
-
-            header('Location: /beasts');
-            die;
-        }
-
-        //List of beasts
+        //beast object
         $beastManager = new BeastManager();
         $beast = $beastManager->selectOneById($id);
+
+        if (!empty($_POST)) {
+
+            //Update object with $_POST info
+            $beast->hydrate($_POST);
+
+            if (!empty($beast->getName()) && !empty($beast->getArea()) && !empty($beast->getSize()) && !empty($beast->getIdPlanet()) && !empty($beast->getIdMovie())) {
+                $beastManager = new BeastManager();
+                //toArray for transform object to array
+                $beastManager->update($id, $beast->toArray());
+
+                header('Location: /beasts');
+                die;
+
+            } else {
+                $_SESSION['message'] = 'Some fields are empty, please fill in !'; //all fields are not filled in
+            }
+        }
+
+        //display error message when form is bad filled in
+        if (isset($_SESSION['message'])) {
+            $message = $_SESSION['message'];
+            unset($_SESSION['message']);
+        }
 
         if ($beast) {
             //civility object
@@ -121,9 +149,10 @@ class BeastController extends AbstractController
             $planets = $planetManager->selectAll();
 
             return $this->twig->render('Beast/edit.html.twig', [
-            'beast' => $beast,
-            'movies' => $movies,
-            'planets' => $planets,
+                'beast' => $beast,
+                'movies' => $movies,
+                'planets' => $planets,
+                'message' => $message,
             ]);
         }
     }
